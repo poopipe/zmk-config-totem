@@ -13,7 +13,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-
+// Tell the pre-processor that &shm refers directly to our custom smart_homerow_mods node
+#define shm &smart_homerow_mods
 / {
     behaviors {
         // Custom Timeless Homerow Mod behavior
