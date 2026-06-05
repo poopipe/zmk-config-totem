@@ -24,7 +24,7 @@
             tapping-term-ms = <280>;		// if key is pressed in isolation, wait this long before converting to modifier
             quick-tap-ms = <175>;		// length of normal keypress
             require-prior-idle-ms = <150>; 	// timeout before modifier turns on 
-            bindings = <&mods>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
     };
 
