@@ -17,6 +17,33 @@
 // Key positions follow binding order in each layer (0 = Q, 1 = W, ... 37 = ESC).
 
 / {
+    macros {
+        // Release ghost shift from matrix before sending brackets on sym (K/L unchanged).
+        sym_lbrc: sym_lbrc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp LBRC>
+                ;
+        };
+
+        sym_rbrc: sym_rbrc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp RBRC>
+                ;
+        };
+    };
+
     behaviors {
         // Vial-like mod-tap: timer + hold-preferred, same-hand shift OK, no positional triggers.
         hm: homerow_mod {
@@ -52,7 +79,7 @@
         sym_func {
             bindings = <
                 &kp LS(N1)	&kp LS(N2)	&kp LS(N3)	&kp LS(N4)	&kp LS(N5)	&kp LS(N6)	&kp LS(N7)	&kp LS(N8)	&kp LS(N9)	&kp LS(N0)
-           	&trans	 	&trans          &kp PG_UP	&trans		&trans		&kp MINUS   	&kp EQUAL       &kp LBRC   	&kp RBRC   	&kp BSLH
+           	&trans	 	&trans          &kp PG_UP	&trans		&trans		&kp MINUS   	&kp EQUAL       &sym_lbrc   	&sym_rbrc   	&kp BSLH
 &trans  	&trans		&kp HOME	&kp PG_DN	&kp END		&trans		&kp LS(MINUS) 	&kp LS(EQUAL)   &kp LS(LBRC)  	&kp LS(RBRC)  	&trans  	&trans
                                                 &trans		&mo 3           &trans          &kp GRAVE    	&trans		&trans
             >;
