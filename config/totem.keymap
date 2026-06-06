@@ -65,7 +65,7 @@
 		sym_func {
 			bindings = <
 				&kp LS(N1)	&kp LS(N2)	&kp LS(N3)	&kp LS(N4)	&kp LS(N5)	&kp LS(N6)	&kp LS(N7)	&kp LS(N8)	&kp LS(N9)	&kp LS(N0)
-				&trans	 	&trans          &kp PG_UP	&none		&trans		&kp MINUS   	&kp EQUAL       &kp MINUS	&kp RBRC   	&kp BSLH
+				&trans	 	&trans          &kp PG_UP	&none		&trans		&kp MINUS   	&kp EQUAL       &kp MINUS	&kp MINUS 	&kp BSLH
 				&trans  	&trans		&kp HOME	&kp PG_DN	&kp END		&trans		&kp LS(MINUS) 	&kp LS(EQUAL)   &kp LS(LBRC)  	&kp LS(RBRC)  	&trans  	&trans
 				&trans		&trans           &trans          &trans		&trans		&kp GRAVE
 			>;
